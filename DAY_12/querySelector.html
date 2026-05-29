@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p class="para">This is a new paragraph added to the document</p>
+
+    <p class="para">hey this is a para</p>
+
+    <p id="newPara">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, ad ratione voluptatum modi recusandae eius! Id non modi et quos.</p>  
+    
+    <button onclick="changeColor()">Change Color</button>
+
+    <script>
+
+        let para = document.querySelectorAll(".para");
+
+        let newPara = document.querySelector("#newPara");
+
+        function changeColor(){
+            for(let i=0; i<para.length; i++){
+                para[i].style.color="red";
+            }
+            newPara.style.color="blue";
+            newPara.style.backgroundColor="yellow";
+            newPara.style.fontSize="20px";
+            newPara .style.fontFamily="bold";
+            newPara.style.padding="10px";
+            newPara.style.border="2px solid black";
+            newPara.style.borderRadius="10px";
+            newPara.style.textAlign="center";
+            newPara.style.transition="all 0.5s ease-in-out";                        
+            newPara.style.cursor="pointer";
+
+        }
+    </script>
+</body>
+</html>

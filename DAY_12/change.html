@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Style</title>
+</head>
+<body>
+
+    <div class="container" id="msg">
+       
+        <p id="para">Hey i am paragraph</p>
+       
+        <h3 id="heading">let's learn</h3>
+    
+    </div>
+
+    <div class="para10"></div>
+
+    <button onclick="changeColor()">change Color</button>
+
+    <button onclick="generate()">create heading</button>
+
+    <button onclick="deleteEle()">delete heading</button>
+
+    <button onclick="generateParagraphs()">generate 10 paragraph</button>
+
+    <button onclick="clearParagraphs()">clear paragraph</button>
+    <script>
+
+        let para = document.getElementById("para");
+
+        let contain = document.getElementsByClassName("container");
+
+        function changeColor(){
+
+            para.style.color = "red";
+
+            contain[0].style.backgroundColor = "yellow";
+        }
+
+        function generate(){
+
+            let message = document.getElementById("msg");
+
+            let newElement = document.createElement("h1");
+
+            newElement.innerText = "Hey i am new";
+
+            newElement.setAttribute("id","newHeading")
+
+            message.appendChild(newElement);
+        }
+        function deleteEle(){
+            
+            let message = document.getElementById("msg");
+
+            let ele= document.getElementById("newHeading");
+            
+            message.removeChild(ele)
+        }
+        function generateParagraphs(){
+            
+            let para10= document.getElementsByClassName("para10")
+            
+            for(let i=0; i<10; i++){
+                
+                let newPara= document.createElement('p')
+
+                newPara.innerText=" This is paragraph "+(i+1);
+
+                para10[0].appendChild(newPara);
+            }
+        }
+
+        // Additional function to clear paragraphs
+
+        function clearParagraphs(){
+            
+            let para10= document.getElementsByClassName("para10")[0];
+
+            while(para10.firstChild) {
+
+                para10.removeChild(para10.firstChild);
+            }
+        }
+
+    </script>
+
+</body>
+</html>
+
+  
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Style</title>
+</head>
+<body>
+
+    <div class="container" id="msg">
+        <p id="para">Hey i am paragraph</p>
+        <h3 id="heading">Let's learn</h3>
+    </div>
+
+    <button onclick="changeColor()">Change Color</button>
+
+    <button onclick="generate()">Create Heading</button>
+
+    <button onclick="deleteEle()">Delete Heading</button>
+
+    <script>
+
+        // Select paragraph
+        let para = document.getElementById("para");
+
+        // Select container
+        let contain = document.getElementsByClassName("container");
+
+        // Change color function
+        function changeColor(){
+
+            para.style.color = "red";
+
+            contain[0].style.backgroundColor = "yellow";
+        }
+
+        // Create new heading
+        function generate(){
+
+            let message = document.getElementById("msg");
+
+            let newElement = document.createElement("h1");
+
+            newElement.innerText = "Hey I am new";
+
+            // Give id to new heading
+            newElement.setAttribute("id", "newHeading");
+
+            // Add heading inside div
+            message.appendChild(newElement);
+        }
+
+        // Delete created heading
+        function deleteEle(){
+
+            let message = document.getElementById("msg");
+
+            let ele = document.getElementById("newHeading");
+
+            // Check if element exists
+            if(ele){
+                message.removeChild(ele);
+            }
+        }
+
+    </script>
+
+</body>
+</html> -->

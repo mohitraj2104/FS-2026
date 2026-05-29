@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Running car</title>
+
+</head>
+
+<body>
+    <h1> Car Run & Stop Animation</h1>
+
+    <button class="runBtn" onclick="runCar()">Run Car</button>
+    <button class="stopBtn" onclick="stopCar()">Stop</button>
+
+    <div class="road">
+
+        <div class="line"></div>
+
+        <img src="https://imgs.search.brave.com/Zurm15pIqrAtA9G_m5qz7dMaBwsPw5S5IDGeuD-R3Aw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91c2Fn/aWYuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy9naWZzL2Nhci1k/cml2aW5nLTc5Lmdp/Zg.gif"
+            class="car" id="car" alt="Car GIF">
+
+    </div>
+
+    <script>
+        let car = document.getElementById("car");
+
+        function runCar() {
+
+            car.style.animationPlayState = "running";
+
+            car.classList.add("running");
+        }
+
+        function stopCar() {
+
+            car.style.animationPlayState = "paused";
+        }
+    </script>
+</body>
+
+</html>

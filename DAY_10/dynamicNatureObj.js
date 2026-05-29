@@ -9,4 +9,8 @@ let obj = {
         this.accountBalance=value;
     }
 }
+obj.supdateBalance= 50000
 obj.balance
+console.log(obj.name)
+obj.name='new student';
+console.log(obj.name)

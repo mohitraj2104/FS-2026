@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .para {
+            font-size: 20px;
+            color: darkblue;
+            cursor: pointer;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        input,
+        select {
+            margin-top: 15px;
+            padding: 8px;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p class="para">This is a new paragraph added to the document</p>
+
+    <button onclick="alertmessage()">Click Me!</button>
+
+    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil amet facilis eum laboriosam, dignissimos modi
+        quibusdam quae cum, perferendis corporis nisi tempore, voluptates accusamus rem asperiores. Veritatis minima
+        consectetur, similique praesentium hic labore ipsum quasi eligendi quisquam odit officiis, aut quas rerum
+        aliquam sequi magnam. Eaque saepe iste ut delectus quas cum provident dignissimos doloribus odio. Dicta aut
+        voluptatum commodi incidunt neque repudiandae recusandae dolorem eveniet eaque. Sapiente consequuntur distinctio
+        nesciunt nemo expedita similique blanditiis molestias porro dicta ipsam. Accusantium reiciendis qui hic cumque
+        exercitationem sunt maxime adipisci deserunt illum tenetur et in porro, earum repellendus, dolor quas? Saepe
+        veritatis quis ex assumenda nam porro, voluptates officia aut quod eligendi ipsum inventore sint rem est ratione
+        ducimus accusantium hic obcaecati temporibus esse debitis maiores cumque. Odio cumque nulla adipisci est
+        repudiandae non corrupti ullam, deserunt, quia pariatur sapiente quidem inventore dicta minus ab consequatur
+        expedita aut suscipit facere? Maiores voluptatem odio deleniti quam tempora distinctio omnis vel, quasi mollitia
+        assumenda? Repellendus sit aut, quia corporis, doloremque dicta dolores, neque totam optio ab ullam! Maiores
+        illo a asperiores alias dolor nam aperiam debitis esse iste laboriosam, officiis minus nisi tempore. Iste
+        dolores suscipit labore iure amet at dolorum, ad neque ea nesciunt corporis reprehenderit, deserunt odio
+        aspernatur sapiente nulla. Expedita, nemo reiciendis. Modi tempore autem eveniet error sequi blanditiis minus
+        quo, possimus obcaecati nostrum velit sapiente, cum dignissimos voluptatibus sint ad nisi dolores in! Velit,
+        exercitationem. Dolor sit aut fugit, aliquam autem fugiat voluptas delectus repudiandae quaerat placeat dolores
+        inventore impedit obcaecati porro tenetur asperiores dicta corporis debitis sint nisi possimus recusandae veniam
+        expedita illum! Consectetur voluptatem animi esse magni nostrum nam aperiam aut quod aliquid libero suscipit
+        pariatur reiciendis ex dolor provident debitis cum eum natus delectus, dignissimos maxime voluptate harum quasi
+        tempore. Maiores expedita veniam tempora quisquam at doloremque corrupti vel excepturi molestiae a voluptates
+        neque, mollitia nihil omnis est! Laboriosam, quaerat illum blanditiis consequuntur odit architecto et sunt minus
+        ad fugiat cupiditate error tenetur? Sunt consequatur aspernatur, dolor ab quae dicta reiciendis illum sequi
+        facilis nobis commodi officia quas, laboriosam ipsam quis voluptatem hic maiores minus explicabo. Earum iusto
+        magni voluptatum esse iste, architecto suscipit praesentium, soluta ullam atque ipsa exercitationem incidunt
+        nihil optio. Nemo deserunt cum explicabo repudiandae aliquid labore error quod commodi laborum architecto,
+        minima voluptatibus nostrum ad consectetur aliquam ab hic ducimus veritatis nulla aspernatur enim sed quis
+        mollitia quasi. Libero illo eius sint dignissimos delectus hic quaerat amet vero unde accusantium quas quam
+        architecto harum recusandae nihil, culpa voluptatibus perferendis quae, impedit animi ex, repudiandae quasi
+        velit deserunt. Quod in reiciendis dolores amet, nihil iure autem ipsum est? Rem voluptatibus quia tempore
+        nesciunt necessitatibus et, mollitia, in ea eligendi quod, tempora quam ab aspernatur. Quaerat, iure, est
+        voluptas suscipit, sit ipsum nesciunt voluptatibus repellat itaque hic adipisci. Molestiae voluptatum recusandae
+        doloremque totam ipsa? Ipsum eligendi molestias necessitatibus eveniet unde commodi natus nisi incidunt
+        reiciendis illum id animi, consequuntur aspernatur numquam accusantium rem sapiente! Quibusdam saepe corporis at
+        ullam earum delectus neque omnis odio tempore?</p>
+
+    <script>
+
+        // Selecting paragraph
+        const para = document.querySelector('.para');
+
+        // Click event
+        para.addEventListener('click', function () {
+            alert('Paragraph clicked!');
+        });
+
+        // Mouseover event
+        para.addEventListener('mouseover', function () {
+            console.log('Mouse is over the paragraph!');
+        });
+
+        // Button function
+        function alertmessage() {
+            alert("Hi class, Welcome to Event Example");
+        }
+
+        // Window load event
+        window.addEventListener('load', function () {
+            console.log('Page has loaded successfully!');
+            alert('Page has loaded successfully!');
+        });
+
+        // Keydown event
+        document.addEventListener('keydown', function (event) {
+            console.log(`Key pressed: ${event.key}`);
+        });
+
+        // Creating input field
+        const inputField = document.createElement('input');
+
+        inputField.type = 'text';
+
+        inputField.placeholder = 'Focus on me!';
+
+        document.body.appendChild(inputField);
+
+        // Focus event
+        inputField.addEventListener('focus', function () {
+            console.log('Input field is focused!');
+        });
+
+        // Blur event
+        inputField.addEventListener('blur', function () {
+            console.log('Input field lost focus!');
+        });
+
+        // Creating select element
+        const selectElement = document.createElement('select');
+
+        const option1 = document.createElement('option');
+        option1.value = 'option1';
+        option1.textContent = 'Option 1';
+
+        const option2 = document.createElement('option');
+        option2.value = 'option2';
+        option2.textContent = 'Option 2';
+
+        selectElement.appendChild(option1);
+        selectElement.appendChild(option2);
+
+        document.body.appendChild(selectElement);
+
+        // Change event
+        selectElement.addEventListener('change', function () {
+            console.log(`Selected value: ${selectElement.value}`);
+        });
+
+        // Creating form
+        const form = document.createElement('form');
+
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.placeholder = 'Enter something';
+
+        const submitButton = document.createElement('button');
+        submitButton.type = 'submit';
+        submitButton.textContent = 'Submit';
+
+        form.appendChild(input);
+        form.appendChild(submitButton);
+
+        document.body.appendChild(form);
+
+        // Submit event
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            console.log('Form submitted!');
+            alert('Form submitted!');
+        });
+
+        // Resize event
+        window.addEventListener('resize', function () {
+            console.log('Window resized!');
+        });
+
+        // Scroll event
+        window.addEventListener('scroll', function () {
+            console.log('Page scrolled!');
+        });
+
+        // Context menu event (Right click)
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+            console.log('Right-click detected!');
+            alert('Right click is disabled!');
+        });
+
+    </script>
+
+</body>
+
+</html>
