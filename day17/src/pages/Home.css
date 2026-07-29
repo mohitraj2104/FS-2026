@@ -1,0 +1,221 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ---------------- HERO ---------------- */
+
+#hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(54%);
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.25);
+}
+
+#hero h1,
+#hero p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-align: center;
+  z-index: 10;
+}
+
+#hero h1 {
+  top: 42%;
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+#hero p {
+  top: 55%;
+  width: 70%;
+  font-size: 1.2rem;
+}
+
+/* ---------------- SERVICES ---------------- */
+
+#services {
+  padding: 80px 10%;
+  background: #fff;
+}
+
+#services h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+#services ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+#services li {
+  width: 300px;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  transition: .3s;
+}
+
+#services li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+/* ---------------- ABOUT ---------------- */
+
+#about {
+  padding: 80px 10%;
+  text-align: center;
+  background: #f4f4f4;
+}
+
+#about h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+#about p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* ---------------- MEDIA ---------------- */
+
+#media {
+  padding: 80px 10%;
+  background: white;
+  text-align: center;
+}
+
+#media h1 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+}
+
+#media p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* ---------------- LOGIN ---------------- */
+
+#login {
+  padding: 80px 10%;
+  background: #f4f4f4;
+}
+
+#login h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+#login form {
+  max-width: 450px;
+  margin: auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+}
+
+#login input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  transition: .3s;
+}
+
+#login input:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 10px rgba(0,119,255,.2);
+  outline: none;
+}
+
+#login button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #0077ff;
+  color: white;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#login button:hover {
+  background: #005fd4;
+  transform: scale(1.02);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 768px) {
+  #hero {
+    height: 70vh;
+  }
+
+  #hero h1 {
+    font-size: 2rem;
+  }
+
+  #hero p {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  #services ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #services li {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  #about,
+  #media,
+  #services,
+  #login {
+    padding: 60px 20px;
+  }
+}

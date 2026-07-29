@@ -1,0 +1,14 @@
+.customers{
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.welcome{
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 34px;
+    color:rgb(106, 25, 192)
+}

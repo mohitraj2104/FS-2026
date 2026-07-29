@@ -1,0 +1,65 @@
+.container{
+    min-height:100vh;
+    background:linear-gradient(to right,#141e30,#243b55);
+    color:white;
+    text-align:center;
+    font-family:Arial,sans-serif;
+}
+
+.hero{
+    padding-top:50px;
+}
+
+.image{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    object-fit:cover;
+    border:5px solid white;
+}
+
+.name{
+    font-size:3rem;
+    margin-top:20px;
+}
+
+.role{
+    color:#00d4ff;
+}
+
+.description{
+    width:70%;
+    margin:auto;
+    line-height:1.8;
+}
+
+.button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+.navbar{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+    background:#111;
+    padding:15px;
+}
+
+.navItem{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
+    cursor:pointer;
+    font-size:14px;
+}
+
+.navItem svg{
+    font-size:22px;
+} 

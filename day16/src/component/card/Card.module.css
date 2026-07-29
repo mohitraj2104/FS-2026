@@ -1,0 +1,33 @@
+.card {
+    border: 1px solid rgb(5, 192, 255);
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgb(0, 0, 0, 0.1);
+}
+.cardTitle{
+    font-size: 24px;
+    color: #ee1818;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.cardEmail{
+    font-size: 23px;
+    color: #0cb3dc;
+    margin-bottom: 10px;
+}
+.cardReview{
+    font-size: 16px;
+    color: #ef23f6;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+.cardRating{
+    font-size: 16px;
+    color: #000000;
+    margin-top: 10px;
+}

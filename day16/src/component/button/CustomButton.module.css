@@ -1,0 +1,8 @@
+.CustomButton {
+  background-color: blue;
+  color: rgb(22, 179, 236);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
